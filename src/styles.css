@@ -1,6 +1,9 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: "Roboto";
     src: url("../public/fonts/Roboto-Regular.ttf");
@@ -19,7 +22,8 @@
     font-weight: 500;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     color: #111111;
     font-family: "Roboto", sans-serif;
@@ -28,6 +32,7 @@ html, body {
 body {
     background: #FDFDFD;
 }
+
 .button {
     border: 0;
     outline: none;
@@ -63,6 +68,7 @@ body {
 .button.button-white:hover {
     background: rgb(241 241 241);
 }
+
 .main-field {
     display: flex;
     align-items: center;
@@ -107,7 +113,8 @@ body {
     opacity: .85;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -123,7 +130,8 @@ textarea {
     padding: 2px 0;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #7C7C7C;
 }
 
@@ -131,4 +139,16 @@ input::placeholder, textarea::placeholder {
     border-color: rgba(0, 0, 0, 0.20);
     box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.35);
     background: rgba(255, 255, 255, 0.75);
+}
+
+.main-field:has(.ng-invalid.ng-touched) {
+    border-color: red;
+}
+
+.input-error {
+    margin-top: 1px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: red;
 }
